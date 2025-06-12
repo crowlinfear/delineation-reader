@@ -57,6 +57,7 @@ http://localhost:5000
 ## Running Tests
 
 From the root of the project, run:
-
+```
 pytest
+```
 
