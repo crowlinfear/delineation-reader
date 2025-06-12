@@ -9,13 +9,19 @@ You can run the application using Docker (recommended) or set it up locally.
 ## Docker Setup (Recommended)
 
 1. Build the Docker image:
+```
    docker-compose build
+```
 
 2. Start the application:
+```
    docker-compose up
+```
 
 3. Visit the app at:
+```
    http://localhost:5000
+```
 
 ## Local Setup
 
@@ -26,20 +32,27 @@ Requirements:
 ### Frontend
 
 cd frontend
+```
 npm install
 npm run build
+```
 
 Then manually copy the build/ folder contents into backend/static/:
-
+```
 cp -r build/* ../backend/static
+```
 
 ### Backend
-
+```
 cd backend
 pip install -r requirements.txt
 python app.py
+```
 
-App will be available at http://localhost:5000
+App will be available at
+```
+http://localhost:5000
+```
 
 ## Running Tests
 
