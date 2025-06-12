@@ -1,6 +1,7 @@
 import csv
 import io
 
+
 def extract_qrs_onsets_from_file(file):
     """
     Takes a file-like object (e.g. from Flask request.files)
@@ -12,7 +13,7 @@ def extract_qrs_onsets_from_file(file):
         reader = csv.reader(stream)
     except Exception as e:
         raise ValueError(f"Failed to process file: {str(e)}")
-    
+
     qrs_onsets = []
     for row in reader:
         if not row or row[0].strip() != "QRS":
@@ -25,4 +26,3 @@ def extract_qrs_onsets_from_file(file):
 
     qrs_onsets.sort()
     return qrs_onsets
-
