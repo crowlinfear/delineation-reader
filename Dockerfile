@@ -14,7 +14,7 @@ COPY ./backend ./backend
 COPY ./backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# ✅ Copy React build into Flask static folder
+# Copy React build into Flask static folder
 COPY --from=frontend /app/build /app/backend/static
 
 WORKDIR /app/backend
